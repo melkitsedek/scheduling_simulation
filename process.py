@@ -1,4 +1,7 @@
 class Process(object):
+    averageWaitTime = 0
+    averageTurnAroundTime = 0
+
     def __init__(self):
         self.pID = 0
         self.burstTime = 0
