@@ -8,4 +8,6 @@ class Process(object):
         self.waitTime = 0
         self.turnAroundTime = 0
         self.arrivalTime = 0
-        
+        self.priority = 0
+        self.remainingTime = 0
+        self.timesOnReadyQueue = 0

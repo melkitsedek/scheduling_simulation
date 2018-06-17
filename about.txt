@@ -1,0 +1,15 @@
+Scheduling simulation description:
+
+    1) First Come, First Served:
+        Processes executed by their arriving time.
+    2) Shortest Job First:
+        Processes executed by their burst time, starting with the shortest burst.
+    3) Shortest Remaining Time First:
+        Processes executed by burst time, starting with the shortest, however with pre-emption support (
+        when a process with lower burst time is scheduled, if one with higher remaining time is scheduled,
+        it's substituted).
+    4) Round Robin:
+        It's defined a quantum (a fixed time portion) and the processes will be executed partially in a 
+        First In, First Out rotation until they're completely executed.
+    5) Multilevel:
+        More than one scheduling model combined. 

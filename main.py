@@ -6,6 +6,7 @@ print("""Welcome to the scheduling simulation.
 Available scheduling options:
     - (1)First Come First Serve;
     - (2)Shortest Job First;
+    - (3)Shortest Remaining Time First;
     """)
 scheduling = int(input("Please, select one by the number: "))
 
@@ -16,12 +17,16 @@ while True:
     elif scheduling == 2:
         print("Shortest Job First selected!\n")
         break
+    elif scheduling == 3:
+        print("Shortest Remaining Time First selected!\n")
+        break
     else:
         print("Invalid option.")
         print("""
         Available scheduling options:
             - (1)First Come First Serve;
             - (2)Shortest Job First;
+            - (3)Shortest Remaining Time First;
             """)
         scheduling = int(input("Please, select one by the number: "))
 

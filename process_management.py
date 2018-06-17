@@ -2,6 +2,7 @@ from process import Process
 from random import randint
 import fcfs
 import sjf
+import srtf
 
 def manualProcessCreator(numberOfProcesses):
     processes = []
@@ -44,7 +45,7 @@ def calculateTurnAroundTime(processes):
     Process.averageTurnAroundTime /= len(processes)
     return processes
 
-def printProcesses(processes):
+def printProcessesSimple(processes):
     print("PROCESS ID\tBURST TIME\tTIME OF ARRIVAL\tWAIT TIME\tTURNAROUND TIME")
     for p in processes:
           print(p.pID, "\t\t", p.burstTime, "\t\t", p.arrivalTime, "\t\t", p.waitTime, "\t\t", p.turnAroundTime)
@@ -52,15 +53,20 @@ def printProcesses(processes):
     print("Average Waiting Time: ", Process.averageWaitTime, "\tAverage Turnaround Time: ", Process.averageTurnAroundTime)
     return
 
+def printProcessesPlus(processes):
+    return
+
 def calculate(processes, scheduling):
     if scheduling == 1:
         processes = fcfs.order(processes)
     elif scheduling == 2:
         processes = sjf.order(processes)
+    elif scheduling == 3:
+        processes = srtf.order(processes)
     processes = calculateWaitTime(processes)
     processes = calculateTurnAroundTime(processes)
 
-    printProcesses(processes)
+    printProcessesSimple(processes)
     return 
     
     
